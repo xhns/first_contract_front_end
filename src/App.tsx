@@ -35,7 +35,8 @@ function App() {
       </div>
       <div>
         <div className='Card'>
-          <b>{WebApp.platform}</b>
+          <b>Platform</b>
+          <div className='Hint'>{WebApp.platform}</div>
           <b>Our contract Address</b>
           <div className='Hint'>{contract_address?.slice(0,30)+"..."}</div>
           <b>Our contract Balance</b>
@@ -48,7 +49,8 @@ function App() {
         </div>
       </div>
 
-      <a onClick={() => { showAlert() }}>Show Alert</a>
+      <a onClick={() => { showAlert() }}>Color scheme is: {WebApp.colorScheme}</a>
+      <br/>
 
       {connected && (
         <a onClick={() => { sendIncrement()}}>Increment by 5</a>
